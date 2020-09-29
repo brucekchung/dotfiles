@@ -28,7 +28,6 @@ remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
 	git rm -f $(MODULE)
 	$(RM) -r $(MODULE).tmp
 
-
 .PHONY: path
 path: ## Test path
 	@echo "$(HOME)"
