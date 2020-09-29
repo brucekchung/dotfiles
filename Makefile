@@ -18,3 +18,12 @@ update-plugins: ## Updates all plugins.
 		git reset --hard origin/release; \
 	fi
 	git submodule foreach 'git pull --recurse-submodules origin `git rev-parse --abbrev-ref HEAD`'
+
+.PHONY: remove-submodule
+remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
+	@:$(call check_defined, MODULE, path of module to remove)
+	mv $(MODULE) $(MODULE).tmp
+	git submodule deinit -f -- $(MODULE)
+	$(RM) -r .git/modules/$(MODULE)
+	git rm -f $(MODULE)
+	$(RM) -r $(MODULE).tmp
