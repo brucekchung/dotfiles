@@ -27,3 +27,14 @@ remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
 	$(RM) -r .git/modules/$(MODULE)
 	git rm -f $(MODULE)
 	$(RM) -r $(MODULE).tmp
+
+.PHONY: path
+path: ## Test path
+	@echo "$(HOME)"
+	@echo "$(PWD)"
+
+.PHONY: symlink
+symlink: ## Sets up symlink for user and root .vimrc for vim - UNTESTED
+	# ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
+	# sudo ln -snf "$(HOME)/.vim" /root/.vim
+	# sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
