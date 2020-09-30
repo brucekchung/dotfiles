@@ -38,3 +38,11 @@ symlink: ## Sets up symlink for user and root .vimrc for vim - UNTESTED
 macros: ## Set system defaults
 	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 	defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+
+.PHONY: list-env
+list-env: ## List applicable environmental variables
+	@echo "HOME - ${HOME}"
+	@echo "PWD - ${PWD}"
+	@echo "LC_TERMINAL - ${LC_TERMINAL}"
+	@echo "ZSH - ${ZSH}"
+	@echo "PYENV_SHELL - ${PYENV_SHELL}"
