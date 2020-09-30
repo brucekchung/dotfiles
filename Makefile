@@ -54,3 +54,4 @@ install: ## Install brew, zsh, etc - UNDER CONSTRUCTION
 	# install homebrew as package manager
 	# install iterm2 as terminal
 	# install zsh as shell
+	# install oh my zsh as zsh configuration framework
