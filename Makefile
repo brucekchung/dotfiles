@@ -38,3 +38,8 @@ symlink: ## Sets up symlink for user and root .vimrc for vim - UNTESTED
 	# ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
 	# sudo ln -snf "$(HOME)/.vim" /root/.vim
 	# sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
+
+.PHONY: macros
+macros: ## Set system defaults
+	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+	defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
