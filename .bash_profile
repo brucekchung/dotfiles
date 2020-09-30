@@ -1,4 +1,3 @@
-#might need to sourch zsh rc
 alias bashrefresh="source ~/.bash_profile"
 
 #git commands
@@ -10,18 +9,18 @@ alias gconflict='vim +Conflicted'
 #open bash
 alias bashprofile='cd ~; vim .bash_profile'
 
-#navigation
-alias ltflask='cd /var/www/ltflask'
+#network
+alias ip="curl -s ipinfo.io | jq -r '.ip'"
+alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
-#source virtual env
-alias ltenv='source ~/LandTitle/environments/ltenv/bin/activate && source env.sh'
 
-#db migrations
-alias downgrade='python3 alembic_bulk_downgrade.py stage'
-alias upgrade='alembic upgrade heads'
+# need to symlink and source?
 
-#point ctags to homebrew version
-alias ctags="`brew --prefix`/bin/ctags"
+# Add `~/bin` to the `$PATH`
+# export PATH="$HOME/bin:$PATH";
 
-#declare path to postgresql 12.2
-export PATH=/usr/local/Cellar/postgresql/12.2/bin:$PATH
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+# for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+# 	[ -r "$file" ] && [ -f "$file" ] && source "$file";

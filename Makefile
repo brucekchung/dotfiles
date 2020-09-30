@@ -28,13 +28,13 @@ remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
 	git rm -f $(MODULE)
 	$(RM) -r $(MODULE).tmp
 
-.PHONY: path
-path: ## Test path
-	@echo "$(HOME)"
-	@echo "$(PWD)"
-
 .PHONY: symlink
 symlink: ## Sets up symlink for user and root .vimrc for vim - UNTESTED
 	# ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
 	# sudo ln -snf "$(HOME)/.vim" /root/.vim
 	# sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
+
+.PHONY: macros
+macros: ## Set system defaults
+	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+	defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
