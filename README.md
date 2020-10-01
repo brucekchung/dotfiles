@@ -9,6 +9,7 @@ TODO:
 - brew script for applications
 
 
+- pathogen as git submodule instead of hardcopy?
 - move alias' from bash_profile to zshrc and delete all bash related
 - edit .zshrc
 - add zsh plugins! fzf - file fuzzy finder for terminal
