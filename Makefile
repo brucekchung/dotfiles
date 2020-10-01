@@ -1,4 +1,4 @@
-SHELL := bash #TODO - should this be zsh?
+# SHELL := bash #TODO - should this be zsh/removed?
 
 .PHONY: help
 help:
