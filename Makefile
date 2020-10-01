@@ -1,4 +1,4 @@
-SHELL := bash #TODO - should this be zsh?
+# SHELL := bash #TODO - should this be zsh/removed?
 
 .PHONY: help
 help:
@@ -47,11 +47,16 @@ list-env: ## List applicable environmental variables
 	@echo "LC_TERMINAL - ${LC_TERMINAL}"
 	@echo "ZSH - ${ZSH}"
 	@echo "PYENV_SHELL - ${PYENV_SHELL}"
+	@echo "...ensure TERMINAL is iterm2, ZSH points to ohmyzsh, and SHELL is zsh..."
 
 .PHONY: install
-install: ## Install brew, zsh, etc - UNDER CONSTRUCTION
-	@echo "Not ready yet"
-	# install homebrew as package manager
-	# install iterm2 as terminal
-	# install zsh as shell
-	# install oh my zsh as zsh configuration framework
+install: ## Install Brew and terminal setup (iTerm2, ZSH, oh-my-zsh)
+	@echo "Installing Brew..."
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	@echo "Installing iTerm2..."
+	brew cask install iterm2
+	@echo "Installing ZSH..."
+	brew install zsh
+	@echo "Installing oh-my-zsh..."
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	@echo "Installation complete!"	
