@@ -5,7 +5,6 @@ GOAL:
 
 TODO:
 - brew -> iterm2 -> zsh -> ohmyzsh TEST
-- move alias' from bash_profile to zshrc and delete all bash related
 
 
 - brew script for applications
