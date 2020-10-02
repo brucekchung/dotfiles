@@ -12,4 +12,4 @@ TODO:
 - edit .zshrc
 - add zsh plugins! fzf - file fuzzy finder for terminal
 - fonts? IBM monoplex?
-- solarized setup?
+- solarized setup??

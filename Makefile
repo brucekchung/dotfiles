@@ -34,6 +34,7 @@ symlink: ## Symlinks vimrc, zshrc, gitignore_global
 	ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
 	ln -snf "$(PWD)/.zshrc" "$(HOME)/.zshrc"
 	ln -snf "$(PWD)/.gitignore_global" "$(HOME)/.gitignore_global"
+	git config --global core.excludesfile ~/.gitignore_global
 
 .PHONY: set-macros
 set-macros: ## Set system defaults TODO-set elsewhere
