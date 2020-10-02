@@ -30,10 +30,10 @@ remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
 	$(RM) -r $(MODULE).tmp
 
 .PHONY: symlink
-symlink: ## Sets up symlink for user and root .vimrc for vim - UNTESTED
-	# ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
-	# sudo ln -snf "$(HOME)/.vim" /root/.vim
-	# sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
+symlink: ## Symlinks vimrc, zshrc, gitignore_global
+	ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
+	ln -snf "$(PWD)/.zshrc" "$(HOME)/.zshrc"
+	ln -snf "$(PWD)/.gitignore_global" "$(HOME)/.gitignore_global"
 
 .PHONY: set-macros
 set-macros: ## Set system defaults TODO-set elsewhere
