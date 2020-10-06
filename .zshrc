@@ -1,15 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# TODO: touch alias file in script?
 source $PWD/.alias
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bchung/.oh-my-zsh"
-
-#Python virtual environments
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
 
 #setup pyenv - removing this will revert system back to Homebrew version of python
 eval "$(pyenv init -)"
@@ -104,6 +99,7 @@ ZSH_THEME="refined"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# TODO: ??
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
