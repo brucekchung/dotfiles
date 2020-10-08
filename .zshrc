@@ -4,7 +4,7 @@
 source $PWD/.alias
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/bchung/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 #setup pyenv - removing this will revert system back to Homebrew version of python
 eval "$(pyenv init -)"
@@ -100,7 +100,7 @@ ZSH_THEME="refined"
 plugins=(git)
 
 # TODO: ??
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
