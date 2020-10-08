@@ -4,7 +4,7 @@
 alias grc="git for-each-ref --sort=-committerdate --count=12 --format='%(refname:short)' refs/heads/"
 # pretty merge graph
 alias adog='git log --all --decorate --oneline --graph'
-# another merge graph
+# short hash, date, commit msg
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 # for git conflicted vim splits
 alias gconflict='vim +Conflicted'
