@@ -1,34 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# TODO: symlink alias at root? and resource?
 source $HOME/Projects/dotfiles/.alias
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-#setup pyenv - removing this will revert system back to Homebrew version of python
-eval "$(pyenv init -)"
-
-python2.latest() {
-  pyenv shell 2.7.15
-  pyenv virtualenvwrapper
-}
-
-python3.latest() {
-  pyenv shell 3.7.2
-  pyenv virtualenvwrapper
-}
-
-python.ltflask() {
-  pyenv shell 3.6.5
-  pyenv virtualenvwrapper
-}
-
-# default to Python 3.6.5
-# python.ltflask()
-
-
-
 
 
 # Set name of the theme to load --- if set to "random", it will
