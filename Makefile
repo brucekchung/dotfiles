@@ -1,10 +1,7 @@
-# SHELL := bash #TODO - should this be zsh/removed?
-
 .PHONY: help
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-#TODO - make git submodule and remove copy?
 .PHONY: update-pathogen
 update-pathogen: ## Updates pathogen.
 	curl -LSso $(CURDIR)/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
@@ -36,8 +33,9 @@ symlink: ## Symlinks vimrc, zshrc, gitignore_global
 	ln -snf "$(PWD)/.gitignore_global" "$(HOME)/.gitignore_global"
 	git config --global core.excludesfile ~/.gitignore_global
 
+# TODO: set defaults elsewhere
 .PHONY: set-macros
-set-macros: ## Set system defaults TODO-set elsewhere
+set-macros: ## Set system defaults
 	defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 	defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 
@@ -47,7 +45,7 @@ list-env: ## List applicable environmental variables
 	@echo "PWD - ${PWD}"
 	@echo "LC_TERMINAL - ${LC_TERMINAL}"
 	@echo "ZSH - ${ZSH}"
-	@echo "PYENV_SHELL - ${PYENV_SHELL}"
+	@echo "SHELL - ${SHELL}"
 	@echo "...ensure TERMINAL is iterm2, ZSH points to ohmyzsh, and SHELL is zsh..."
 
 .PHONY: install

@@ -4,12 +4,9 @@ GOAL:
 - all done through Makefile commands
 
 TODO:
-- brew -> iterm2 -> zsh -> ohmyzsh TEST
-
+- add zsh plugins! fzf - file fuzzy finder for terminal
 
 - brew script for applications
-- edit .zshrc
-- add zsh plugins! fzf - file fuzzy finder for terminal
 - fonts? IBM monoplex?
 - solarized setup??
 - make README niceeee
