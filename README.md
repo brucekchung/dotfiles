@@ -14,4 +14,6 @@ TODO:
 
 Issues!!!
 - Xterm install... so I can git init etc
-- make install doesn't work...
+- remap capslock to ctrl...
+- IBM Plex Mono, then click to install
+- install pathogen
