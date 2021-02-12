@@ -10,3 +10,8 @@ TODO:
 - fonts? IBM monoplex?
 - solarized setup??
 - make README niceeee
+
+
+Issues!!!
+- Xterm install... so I can git init etc
+- make install doesn't work...

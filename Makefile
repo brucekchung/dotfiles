@@ -51,7 +51,9 @@ list-env: ## List applicable environmental variables
 .PHONY: install
 install: ## Install Brew and terminal setup (iTerm2, ZSH, oh-my-zsh)
 	@echo "Installing Brew..."
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	# Deprecated...
+	# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	@echo "Installing iTerm2..."
 	brew cask install iterm2
 	@echo "Installing ZSH..."
