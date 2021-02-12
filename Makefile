@@ -27,11 +27,12 @@ remove-submodule: ## Removes a git submodule (ex MODULE=bundle/nginx.vim).
 	$(RM) -r $(MODULE).tmp
 
 .PHONY: symlink
-symlink: ## Symlinks vimrc, zshrc, gitignore_global
+symlink: ## Symlinks vimrc, zshrc, gitignore_global, .vim
 	ln -snf "$(PWD)/.vimrc" "$(HOME)/.vimrc"
 	ln -snf "$(PWD)/.zshrc" "$(HOME)/.zshrc"
 	ln -snf "$(PWD)/.gitignore_global" "$(HOME)/.gitignore_global"
 	git config --global core.excludesfile ~/.gitignore_global
+	ln -snf "$(PWD)/.vim" "$(HOME)/.vim"
 
 # TODO: set defaults elsewhere
 .PHONY: set-macros
