@@ -22,7 +22,7 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-Can list commands by running `make help` </ br>
+Can list commands by running `make help` <br>
 Update and symlink your setup from the menu
 
 
