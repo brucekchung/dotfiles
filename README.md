@@ -28,9 +28,7 @@ Update and symlink your setup from the menu
 
 #### Others
 
-ssh key for github </ br>
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[ssh key for github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-download IBM monoplex font </ br>
-https://fonts.google.com/specimen/IBM+Plex+Mono </ br>
+[download IBM monoplex font](https://fonts.google.com/specimen/IBM+Plex+Mono)
 open ‘Font Book’ application, add font
